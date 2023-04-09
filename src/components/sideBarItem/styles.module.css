@@ -1,0 +1,7 @@
+.responMenuItem{
+    @apply flex justify-between p-4 
+}
+
+.responMenuList{
+    @apply overflow-hidden w-full h-[150px] flex flex-col px-5 transition-all
+}
