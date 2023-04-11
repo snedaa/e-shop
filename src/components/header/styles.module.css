@@ -11,16 +11,16 @@
 }
 
 .menu{
-    @apply hidden lg:flex
+    @apply hidden lg:flex z-10
 }
 
 .menuItem{
-    @apply cursor-pointer mx-4 flex items-center relative transition-all
+    @apply cursor-pointer mx-4 flex items-center relative transition-all 
 }
 
 
 .menuList{
-    @apply overflow-hidden  min-w-[12rem] h-0 flex flex-col gap-4 absolute left-0 top-8 transition-all
+    @apply overflow-hidden  min-w-[12rem] h-0 pl-3 flex flex-col gap-4 absolute left-0 top-8 transition-all z-10 bg-white
 }
 
 .menuItem span:hover{
@@ -28,7 +28,7 @@
 }
 
 .menuItem:hover .menuList{
-    @apply  h-48
+    @apply  h-48 
 }
 
 .menuList a{
@@ -53,7 +53,7 @@
 }
 
 .responsiveMenu{
-    @apply  bg-white absolute top-0 left-0 h-screen w-96 transition-all;
+    @apply  bg-white absolute top-0 left-0 h-screen w-96 transition-all z-10;
 }
 
 .close{
