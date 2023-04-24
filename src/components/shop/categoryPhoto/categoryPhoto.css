@@ -1,0 +1,15 @@
+.category-img {
+  @apply w-60 cursor-pointer;
+}
+
+.category-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-btn {
+  @apply absolute w-[70%] h-12 rounded-full bg-white bottom-3 left-9;
+}
+
+.category-img:hover {
+  transform: scale(1.2);
+}

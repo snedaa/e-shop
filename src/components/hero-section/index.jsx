@@ -65,11 +65,9 @@ export default function HeroSection() {
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = navigationPrevRef.current;
             swiper.params.navigation.nextEl = navigationNextRef.current;
-            console.log(swiper);
             swiper.navigation.update();
             swiper.navigation.init();
             swiper.navigation.update();
-            console.log(swiper);
           }}
           modules={[Autoplay, EffectFade, Pagination, Navigation]}
           className="mySwiper"
@@ -131,7 +129,7 @@ export default function HeroSection() {
           <div className="swiper-pagination"></div>
         </Swiper>
 
-        <div className="flex items-center mb-8 absolute w-full top-1/2 z-10">
+        <div className="flex items-center mb-8 absolute w-full top-1/2 z-[1]">
           <div className="flex w-full !justify-between items-center gap-2">
             <div
               ref={navigationPrevRef}

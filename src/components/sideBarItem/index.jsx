@@ -2,9 +2,9 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 
-function SideBarItem({title}) {
+function SideBarItem({ category }) {
   const [dropDownActive, setdropDownActive] = useState(false);
 
   const handleDropdown = () => {
@@ -13,8 +13,11 @@ function SideBarItem({title}) {
 
   return (
     <div>
-      <Link className={styles.responMenuItem}>
-        {title}
+      <Link
+        to={`shop/${category.name}`.toLowerCase()}
+        className={styles.responMenuItem}
+      >
+        {category.name}
         <RiArrowDropDownLine className="text-2xl" onClick={handleDropdown} />
       </Link>
 
@@ -25,12 +28,14 @@ function SideBarItem({title}) {
           height: dropDownActive ? "150px" : "0",
         }}
       >
-        <Link>Item</Link>
-        <Link>Item</Link>
-        <Link>Item</Link>
-        <Link>Item</Link>
-        <Link>Item</Link>
-        <Link>Item</Link>
+        {category.subCategories.map((subCategory) => (
+          <Link
+            key={subCategory.id}
+            to={`/shop/${category.name}/${subCategory.name}`.toLowerCase()}
+          >
+            {subCategory.name}
+          </Link>
+        ))}
       </div>
     </div>
   );

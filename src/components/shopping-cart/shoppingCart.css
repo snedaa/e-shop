@@ -1,0 +1,13 @@
+.basket-container {
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.basket-closed {
+  width: 0;
+  height: 0;
+}
+
+.basket-open {
+  width: 500px;
+  height: 100%;
+}
